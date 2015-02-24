@@ -1,0 +1,1 @@
+INFO::2015-02-21T16:28:56+00:00::This is an INFO Message for File Logger
