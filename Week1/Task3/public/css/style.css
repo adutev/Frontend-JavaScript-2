@@ -1,0 +1,39 @@
+body{
+	background: #fa5b4d;
+	padding: 0 40px;
+}
+.posts {
+	width: 60%;
+	display:block;
+	background: #CCFF33;
+	float: left;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+#sidebar {
+	width: 20%;
+	display: block;
+	padding: 30px;
+	float: right;
+	list-style: none;
+	background: #CCFF33;
+	border-radius: 10px;
+}
+
+p {
+	background-color:#FF6600;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 14px;
+}
+
+h3 {
+	margin-top:0;
+}
+
+li a {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
