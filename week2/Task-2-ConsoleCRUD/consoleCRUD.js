@@ -1,15 +1,11 @@
 var prompt = require('prompt');
 var jf = require('jsonfile')
-var util = require('util')
- 
 var file = 'data/users.json';
+var util = require('util')
+var Table = require('cli-table');
+var chalk = require('chalk');
 
 var table = [
-    {
-        id:'ID',
-        name: 'Name',
-        email: 'EMail'
-    },
     {
         id: 123,
         name: 'John',
@@ -21,9 +17,13 @@ var table = [
         email: 'J@D.com'
     }]
 
+
+
+
 prompt.start();
 
 function getCommand () {
+	console.log("commands | 'add', 'get', 'delete', 'list', 'search', 'save', 'load', 'quit' |");
   prompt.get([
   {
     name: 'command'
@@ -40,9 +40,10 @@ function getCommand () {
         searchUser();
     } else if(result.command === 'save') {
         saveToJson();
-    }
-    else if(result.command === 'quit') {
-        console.log('Quitting now :(')
+    } else if(result.command === 'load') {
+        loadFromFile();
+    } else if(result.command === 'quit') {
+        console.log('Quitting now');
     } else {
         invalidCommand();
     }
@@ -50,14 +51,30 @@ function getCommand () {
 }
 
 function printTable() {
-    var result = ''
-    for(var row in table){
-        for(var col in table[row]){
-            result += '|' + (table[row][col]);            
-        }
-        result += '|\n';
-    }
-    console.log(result);
+	var tableToPrint = new Table({
+	    head: ['ID', 'Name', 'Email']
+	});
+
+    for(var row in table) {
+		var rowToPush = [];
+		for(var col in table[row]){
+			switch(col) {
+				case 'id':
+					rowToPush.push(chalk.yellow(table[row][col]));
+					break;
+				case 'name':
+				rowToPush.push(chalk.blue(table[row][col]));
+					break;
+				case 'email':
+					rowToPush.push(chalk.green(table[row][col]));
+					break;
+			}
+		}
+		tableToPrint.push(rowToPush);
+	}
+
+	console.log(tableToPrint.toString());
+
     getCommand();
 }
 
@@ -76,9 +93,17 @@ function addUser () {
 
 function getRow () {
     prompt.get(['key', 'value'], function (err, result) {
+    	var tableToPrint = new Table({
+		    head: ['ID', 'Name', 'Email']
+		});
         for(var row in table){
             if(table[row][result.key] == result.value){
-                console.log(JSON.stringify(table[row]));
+            	var rowToPush = [];
+            	for(var col in table[row]) {
+            		rowToPush.push(table[row][col]);
+            	}
+            	tableToPrint.push(rowToPush);
+                console.log(tableToPrint.toString());
                 break;
             }
         }
@@ -89,6 +114,16 @@ function getRow () {
 function saveToJson() {
     jf.writeFile(file, table);
     getCommand();
+}
+
+function loadFromFile () {
+	try {
+		table = jf.readFileSync("data/users.json");
+	} catch(err) {
+		console.log(err);
+	}
+
+	 getCommand();
 }
 
 function removeElement() {

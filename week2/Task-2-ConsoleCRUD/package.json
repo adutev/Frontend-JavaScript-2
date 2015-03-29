@@ -1,8 +1,8 @@
 {
-  "name": "HangMan",
+  "name": "consoleCRUD",
   "version": "1.0.0",
   "description": "",
-  "main": "hangMan.js",
+  "main": "consoleCRUD.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
