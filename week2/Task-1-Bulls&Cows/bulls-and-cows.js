@@ -49,4 +49,4 @@ function findBulls (numberToGuess, playerGuess) {
 	return result;
 }
 
-guessNumber()
+guessNumber();

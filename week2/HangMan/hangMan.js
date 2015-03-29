@@ -20,8 +20,8 @@ function getWordToGuess () {
 
 function guessALetter(){
     console.log("Lives left: " + lives)
- prompt.get([
-  {
+    prompt.get([
+    {
       name: 'ch'
     }], function (err, result) {
         if(word.toLowerCase().indexOf(result.ch) != -1 && result.ch != ''){
@@ -47,7 +47,7 @@ function guessALetter(){
                 guessALetter();
             }
         }
-  });
+    });
 }
 
 function composeGuessStatus(word) {
