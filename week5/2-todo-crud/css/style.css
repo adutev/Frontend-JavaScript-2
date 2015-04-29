@@ -1,0 +1,25 @@
+input#task-name {
+	width: 600px;
+	font-size: 30px;
+}
+ul#tasks-list {
+	list-style: none;
+	width: 600px;
+	padding-left: 0;
+}
+
+ul#tasks-name, ul#tasks-list li {
+	border: 1px solid #AAA;
+	margin: 5px;
+	padding: 5px;
+	width: 600px;
+	height: 24px;
+	font-style: 24;
+	border-radius: 5px;
+	font-size: 15px;
+}
+
+li.finished {
+	color : red;
+	text-decoration: line-through;
+}

@@ -24,14 +24,12 @@ var TodoApp = (function() {
 	}
 
 	var displayList = function() {
-
-		var tasksList = $("#tasks-list");
-
 		//clear the contents
+		var tasksList = $("#tasks-list");
 		tasksList.empty();
 
 		//loop trough the tasks
-		tasks.forEach(function (task) {
+		tasks.forEach(function(task) {
 			var taskId = task.id;
 			var taskName = task.name;
 			var liTask = $("<li></li>", {
@@ -42,7 +40,7 @@ var TodoApp = (function() {
 				type: "checkbox",
 			});
 
-			if(task.finished) {
+			if (task.finished) {
 				chkTaskFinish.attr("checked", "checked");
 				liTask.addClass('finished');
 			}
