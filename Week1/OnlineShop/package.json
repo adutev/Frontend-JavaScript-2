@@ -1,0 +1,17 @@
+{
+  "name": "OnlineShop",
+  "version": "1.0.0",
+  "description": "Online shop app for Frontend-JavaScript-2 course",
+  "main": "server.js",
+  "dependencies": {
+    "bower": "^1.3.12",
+    "express": "^4.12.3",
+    "jade": "^1.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anton Dutev",
+  "license": "ISC"
+}
