@@ -1,0 +1,72 @@
+body {
+	  font-family: arial, sans-serif;
+}
+.product-container {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+	
+}
+
+.product-container li {
+	text-align: left;
+}
+
+li{
+  color: #2e425a;
+ }
+
+.title {
+ 	color: #2e425a;
+ }
+
+div.offer {
+  	color: fff;
+}
+
+ .offer-header {
+ 	background-color: #e4322e;
+  	padding: 16px;
+  	border-radius: 10px 10px 0 0;
+ }
+
+
+.offer-price {
+  	font-size: 2.6em;
+}
+
+.offer-list {
+	border: 2px solid #e4322e;
+	border-radius: 0 0 10px 10px;
+  	padding: 10px;
+  	font-size: 1.6em;
+}
+
+.offer>button{
+	background-color: #e4322e;
+	padding: 15px;
+  	font-size: 2.6em;
+  	margin-top: 20px;
+}
+.offer>button>a{
+	color:#fff;
+	text-decoration: none;
+}
+
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+thead {
+	  color: #9ea9b7;
+	  font-size: 0.8em;
+	  line-height: 1;
+	  text-transform: uppercase;
+	  font-weight: normal;
+	  vertical-align: middle;
+}

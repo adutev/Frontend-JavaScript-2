@@ -1,24 +1,26 @@
 "use strict"
 
-// require the dependencies
-var express = require('express');
-var fs = require('fs');
-var products = require('./products.json');
+// dependancies
+var express = require('express')
+var fs = require("fs");
+var products = require("./products.json");
+var chart = require("./chart.json");
 
-// declare the app
-var app = express();
+// create app
+var app = express()
 
-// configure the app
+
+// configuration and middleware 
 app.use(express.static('public'));
 app.set('view engine', 'jade');
 
-// add the routes
+
+// routes
 app.get('/', function (req, res) {
-  res.render('index');
-})
+  res.render('index', {products: products, chart: chart});
+});
 
-
-// listen for files: /post -> /views/post.jade
+// listen for files: /product -> /views/product.jade
 app.get("/:fileName", function(req, res, next){
   if(req.params && req.params.fileName){
     var fileName = req.params.fileName.replace(".html","");
@@ -26,21 +28,27 @@ app.get("/:fileName", function(req, res, next){
     // if jade file exists
     if(fs.existsSync(__dirname+"/views/"+fileName+".jade")){
       res.render(fileName);
-    // if post is in posts
+    // if product is in products
+    } else if (products[fileName]) {
+      res.render("product", {product: products[fileName]});
+    // else continue
     } else {
       next();
     }
+
   } else {
     next();
   }
-});
+})
 
-// launch the server
+
+
+// set up server
 var server = app.listen(3000, function () {
 
-  var host = server.address().address;
-  var port = server.address().port;
+  var host = server.address().address
+  var port = server.address().port
 
-  console.log('Example app listening at http://%s:%s', host, port);
+  console.log('Example app listening at http://%s:%s', host, port)
 
 })

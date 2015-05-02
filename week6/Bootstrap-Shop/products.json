@@ -1,8 +1,62 @@
 {
-    "product1" : {
-        "id":1,
-        "img": "img/product1.png",
-        "title": "Shumensko",
-        "Description": "This is the shit."
-    }    
+    "Lenovo" : {
+        "img": "http://laptop.bg/system/images/38429/large/G50_30.jpg?1400766371",
+        "name": "Lenovo G50-45",
+        "text": [
+                    "4GB",
+                    "i7 CPU",
+                    "GPS"
+                ],
+        "price": 530
+    },
+    "Acer" : {
+        "img": "http://laptop.bg/system/images/63625/large/acer_aspire_e5572g_NX_MQ0EX_002.jpg?1423749139",
+        "name": "Acer Aspire E5-572G",
+        "text": [
+                    "4GB",
+                    "i7 CPU",
+                    "GPS"
+                ],
+        "price": 1290
+    },
+    "Apple" : {
+        "img": "http://laptop.bg/system/images/73735/large/apple_macbook_air_11_mjvm2zea.jpg?1430309169",
+        "name": "Apple MacBoom Air 11''",
+        "text": [
+                    "4GB",
+                    "i7 CPU",
+                    "GPS"
+                ],
+        "price": 324
+    },
+    "Dell" : {
+        "img": "http://laptop.bg/system/images/41673/large/Inspiron_3531.jpg?1405933991",
+        "name": "Dell Inspiron 3531",
+        "text": [
+                    "4GB",
+                    "i7 CPU",
+                    "Free Bag"
+                ],
+        "price": 1344
+    },
+    "HP" : {
+        "img": "http://laptop.bg/system/images/58863/large/hp_pavilion_15_p052su_J6Z60EA.jpg?1420554509",
+        "name": "HP Pavilion 23412",
+        "text": [
+                    "2GB",
+                    "i3 CPU",
+                    "Free Bag"
+                ],
+        "price": 1234
+    }, 
+    "ASUS" : {
+        "img": "http://laptop.bg/system/images/43753/large/G551.jpg?1408709111",
+        "name": "ASUS ROG G551JM-CN013D",
+        "text": [
+                    "4710qm",
+                    "i3 CPU",
+                    "1TB"
+                ],
+        "price": 2002
+    }
 }

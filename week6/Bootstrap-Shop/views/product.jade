@@ -1,4 +1,16 @@
 extends layout
 
 block content
-	p Mimi
+    article
+        h1.title=product.name
+        img.product-image.col-xs-5(src=product.img.replace('large', 'normal'))
+        -var price = { leasing: (product.price/12).toFixed(2) }
+        .offer.col-xs-5
+            .offer-header
+                span.offer-price=product.price
+                p.text="или по "+ price.leasing + " лв. за 12 месеца" 
+            .offer-list
+                ul
+                    each item in product.text
+                        li.text= item
+            button.btn.btn-primary.btn-danger.btn-lg(type=button): a(href="chart.html") Купи
