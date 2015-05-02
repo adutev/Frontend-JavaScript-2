@@ -1,0 +1,16 @@
+html
+  head
+    title Jade Blog
+    link(rel="stylesheet",type="text/css",href="lib/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet",type="text/css",href="css/style.css")
+  body
+    .navbar.navbar-fluid
+        .navbar-header
+            a.navbar-brand(href="/")
+                | UHU Buhu
+    .container-fluid
+        .row
+            .col-xs-2
+                include nav
+            .col-xs-10
+                block content

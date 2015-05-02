@@ -1,0 +1,8 @@
+{
+    "product1" : {
+        "id":1,
+        "img": "img/product1.png",
+        "title": "Shumensko",
+        "Description": "This is the shit."
+    }    
+}
