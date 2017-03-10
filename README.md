@@ -1,3 +1,3 @@
 # Frontend-JavaScript-2
 
-Hack Bulgaria course
+Hack Bulgaria, Frontend-JavaScript course 2015
